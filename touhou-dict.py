@@ -196,12 +196,22 @@ def jp2en(name):
 		return touhou["characters"][name]
 	return ""
 
-# if len(args) == 2:
-f = open("input.txt", "r", encoding="utf-8")
-s = f.read()
+def parse_file(in_file, out_file):
+	f = open(in_file, "r", encoding="utf-8")
+	s = f.read()
 
-for name in touhou["characters"]:
-	s = s.replace(name, jp2en(name))
+	for name in touhou["characters"]:
+		s = s.replace(name, jp2en(name))
 
-out = open("out.txt", "w", encoding="utf-8")
-out.write(s)
+	of = open(out_file, "w", encoding="utf-8")
+	of.write(s)
+	print("->", out_file)
+
+if __name__ == "__main__":
+	args = sys.argv[1:]
+	if len(args) == 1:
+		parse_file(args[0], "out.txt")
+	elif len(args) == 2:
+		parse_file(args[0], args[1])
+	else:
+		print("Usage: `python touhou-dict.py input_file [output_file]`")
