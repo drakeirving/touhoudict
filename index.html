@@ -11,15 +11,11 @@
 
     html{
       height: 100%;
-      box-sizing: border-box;
     }
     body{
       position: relative;
       min-height: 100%;
       margin: 0;
-    }
-    *, *:before, *:after{
-      box-sizing: inherit;
     }
 		#content{
       width: 640px;
@@ -28,12 +24,10 @@
 		}
     footer{
       position: absolute;
-      right: 0;
       bottom: 0;
-      left: 0;
 
       width: 640px;
-      height: 40px;
+      height: 24px;
       margin: 0 auto;
       border-top: 1px solid #888;
       padding: 7px 0 8px;
@@ -54,7 +48,7 @@
       float: right;
     }
 
-    /* misc style */
+    /* pretty */
 
     body, input, select, option{
 	 		font-family: 'PT Sans', serif;
@@ -76,6 +70,14 @@
       color: #888;
     }
 
+    select, input{
+      width: 90%;
+      margin: 0 0 10px;
+    }
+    input{
+      padding: 1px 4px;
+    }
+
     .button-add{
       display: block;
       width: 22px;
@@ -83,18 +85,10 @@
       color: #aaa;
       padding: 0px;
       border: 1px solid #aaa;
-      /*margin: 0 0 10px;*/
     }
     .button-add:hover{
       color: #7a7a7a;
-      border: 1px solid #7a7a7a;
-    }
-    select, input{
-      width: 90%;
-      margin: 0 0 10px;
-    }
-    input{
-      padding: 1px 4px;
+      border-color: #7a7a7a;
     }
 
 	</style>
@@ -111,6 +105,7 @@
     </p>
 
     <div>
+      <noscript><p style="text-align:center; padding:112px; background-color:#f8f8f8">enable js you butt</p></noscript>
       <div class="left">
         <div id="form-characters">
           <!-- selects go here -->
