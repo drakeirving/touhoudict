@@ -305,11 +305,13 @@ var translate_all = function(dict, q){
     console.error("touhoudict: Not a valid dictionary (" + Object.keys(touhoudict).join(", ") + ")");
     return;
   }
-  document.querySelectorAll(q).forEach(function(e){
+  var opts = document.querySelectorAll(q);
+  for(var i=0; i&lt;opts.length; i++){
+    var e = opts[i];
     if(touhoudict[dict].characters.hasOwnProperty(e.innerText)){
       e.innerText = touhoudict[dict].characters[e.innerText];
     }
-  });
+  }
 }
 
 var jp2en_all = translate_all.bind(this, "jp_en");
@@ -317,7 +319,8 @@ var en2jp_all = translate_all.bind(this, "en_jp");
 
 // actually run now
 
-jp2en_all("option");</code>
+jp2en_all("option");
+</code>
       </pre>
     </div>
 
