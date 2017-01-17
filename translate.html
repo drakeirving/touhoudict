@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>touhoudict</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+
+		/* structure */
+
+    html{
+      height: 100%;
+    }
+    body{
+      position: relative;
+      min-height: 100%;
+      margin: 0;
+    }
+		#content{
+      width: 640px;
+      margin: 0 auto;
+      padding: 48px 0;
+		}
+    footer{
+      position: absolute;
+      bottom: 0;
+
+      width: 640px;
+      height: 24px;
+      margin: 0 auto;
+      border-top: 1px solid #888;
+      padding: 7px 0 8px;
+    }
+
+    /* boxes */
+
+    div.left{
+      display: inline-block;
+      width: 49.5%;
+    }
+    div.right{
+      display: inline-block;
+      width: 49.5%;
+      float: right;
+    }
+    div.right *{
+      float: right;
+    }
+
+    /* pretty */
+
+    body, input, select, option{
+	 		font-family: 'PT Sans', serif;
+			font-size: 18px;
+      text-align: justify;
+    }
+		h3{
+			border-left: 6px solid #6cf;
+			padding-left: 6px;
+		}
+		a{
+			text-decoration: none;
+			color: #29c;
+		}
+		a:visited{
+			color: #29c;
+		}
+    .text-light{
+      color: #888;
+    }
+
+    select, input{
+      box-sizing: border-box;
+      width: 90%;
+      height: 28px;
+      margin: 0 0 10px;
+    }
+    input{
+      padding: 1px 4px;
+    }
+
+    .button-add{
+      display: block;
+      width: 22px;
+      height: 22px;
+      color: #aaa;
+      padding: 0px;
+      border: 1px solid #aaa;
+    }
+    .button-add:hover{
+      color: #7a7a7a;
+      border-color: #7a7a7a;
+    }
+
+	</style>
+</head>
+
+<body>
+	<div id="content">
+
+    <h1>touhoudict</h1>
+
+    <h3>2hu English-Japanese Translation Thingy</h3>
+    <p class="text-light">
+      List the character names to be translated. Characters possible to select and their corresponding translations are as listed for the <a href=http://toho-vote.info/List.php>Touhou Project Popularity Poll</a>.
+    </p>
+
+    <div>
+      <noscript><p style="text-align:center; padding:112px; background-color:#f8f8f8">enable js you butt</p></noscript>
+      <div class="left">
+        <div id="form-characters">
+          <!-- selects go here -->
+          <button class="button-add">+</button>
+        </div>
+      </div>
+      <div class="right">
+        <div id="out-characters">
+          <!-- results go here -->
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        <!-- bla -->
+      </p>
+    </div>
+
+    <footer>
+      <a href="https://twitter.com/drakeirving">@drakeirving</a>
+    </footer>
+	</div>
+
+  <script type="text/javascript" src="touhoudict.js"></script>
+  <script>
+    (function(){
+      var form = document.getElementById("form-characters");
+      var button = form.getElementsByClassName("button-add")[0];
+      var out = document.getElementById("out-characters");
+      var makeDropdown = function(){
+        // left
+        var select = document.createElement("select");
+        select.value = "";
+        form.insertBefore(select, button);
+        var opt = document.createElement("option");
+        opt.value = "";
+        opt.disabled = "disabled";
+        opt.selected = "selected";
+        opt.style.display = "none";
+        select.appendChild(opt);
+        Object.keys(touhou.characters).forEach(function(e){
+          var opt = document.createElement("option");
+          opt.value = e;
+          opt.innerHTML = e;
+          select.appendChild(opt);
+        });
+        // right
+        var textbox = document.createElement("input");
+        out.appendChild(textbox);
+        // do stuff
+        select.onchange = function(){
+          textbox.value = touhou.characters[select.value];
+        }
+      }
+      for(var i=0; i<7; i++){
+        makeDropdown();
+      }
+      button.onclick = makeDropdown;
+    })();
+  </script>
+
+</body>
+</html>
