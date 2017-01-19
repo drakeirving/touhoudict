@@ -202,15 +202,19 @@ for(k of Object.keys(touhoudict.en_jp.characters)){
 var translate_all = function(dict, q){
   if(!touhoudict.hasOwnProperty(dict)){
     console.error("touhoudict: Not a valid dictionary (" + Object.keys(touhoudict).join(", ") + ")");
-    return;
+    return false;
   }
   var opts = document.querySelectorAll(q);
+  var c = 0;
 	for(var i=0; i<opts.length; i++){
 		var e = opts[i];
     if(touhoudict[dict].characters.hasOwnProperty(e.innerText)){
       e.innerText = touhoudict[dict].characters[e.innerText];
+      c++;
     }
   }
+  console.log("touhoudict: Translated " + c + " instances.")
+  return (c > 0);
 }
 
 var jp2en_all = translate_all.bind(this, "jp_en");
