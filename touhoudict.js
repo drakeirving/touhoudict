@@ -177,19 +177,15 @@ var touhoudict = {
       "Summoned Gods (Amaterasu, Izunome, etc.)": "神降ろしの神霊（天照、伊豆能売他）",
       "Urban legend entities (Okiku-san, Hasshaku-sama)": "都市伝説の怪異（お菊さん、八尺さま他）",
     },
-    "music": {
-
-    },
-    "works": {
-
-    }
+    "music": {},
+    "works": {}
   },
   "jp_en": {
     "characters": {},
     "music": {},
     "works": {}
   }
-}
+};
 
 // populate jp->en
 
@@ -206,14 +202,14 @@ var translate_all = function(dict, q){
   }
   var opts = document.querySelectorAll(q);
   var c = 0;
-	for(var i=0; i<opts.length; i++){
-		var e = opts[i];
-    if(touhoudict[dict].characters.hasOwnProperty(e.innerText)){
-      e.innerText = touhoudict[dict].characters[e.innerText];
+  for(var i=0; i<opts.length; i++){
+    var e = opts[i];
+    if(touhoudict[dict].characters.hasOwnProperty(e.textContent)){
+      e.textContent = touhoudict[dict].characters[e.textContent];
       c++;
     }
   }
-  console.log("touhoudict: Translated " + c + " instances.")
+  console.log("touhoudict: Translated " + c + " instances.");
   return (c > 0);
 }
 

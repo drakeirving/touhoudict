@@ -89,7 +89,7 @@
 
     <h3>translation script thingy</h3>
     <p class="text-light">
-      Intended for use with the <a href=http://toho-vote.info/List.php>Touhou Project Popularity Poll</a>.
+      Intended for use with the <a href=http://toho-vote.info>Touhou Project Popularity Poll</a>.
     </p>
     <p class="text-light">
       Click below to copy the script. Navigate to your desired voting page, open your browser's console (probably with F12), then
@@ -278,19 +278,15 @@
       "Summoned Gods (Amaterasu, Izunome, etc.)": "神降ろしの神霊（天照、伊豆能売他）",
       "Urban legend entities (Okiku-san, Hasshaku-sama)": "都市伝説の怪異（お菊さん、八尺さま他）",
     },
-    "music": {
-
-    },
-    "works": {
-
-    }
+    "music": {},
+    "works": {}
   },
   "jp_en": {
     "characters": {},
     "music": {},
     "works": {}
   }
-}
+};
 
 // populate jp->en
 
@@ -307,14 +303,14 @@ var translate_all = function(dict, q){
   }
   var opts = document.querySelectorAll(q);
   var c = 0;
-	for(var i=0; i&lt;opts.length; i++){
-		var e = opts[i];
-    if(touhoudict[dict].characters.hasOwnProperty(e.innerText)){
-      e.innerText = touhoudict[dict].characters[e.innerText];
+  for(var i=0; i&lt;opts.length; i++){
+    var e = opts[i];
+    if(touhoudict[dict].characters.hasOwnProperty(e.textContent)){
+      e.textContent = touhoudict[dict].characters[e.textContent];
       c++;
     }
   }
-  console.log("touhoudict: Translated " + c + " instances.")
+  console.log("touhoudict: Translated " + c + " instances.");
   return (c > 0);
 }
 
@@ -323,9 +319,7 @@ var en2jp_all = translate_all.bind(this, "en_jp");
 
 // actually run now
 
-jp2en_all("option");
-
-</code>
+jp2en_all("option");</code>
       </pre>
     </div>
 
