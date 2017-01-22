@@ -203,11 +203,14 @@ var translate_all = function(dict, q){
   var opts = document.querySelectorAll(q);
   var c = 0;
   for(var i=0; i<opts.length; i++){
-    var e = opts[i];
-    if(touhoudict[dict].characters.hasOwnProperty(e.textContent)){
-      e.textContent = touhoudict[dict].characters[e.textContent];
-      c++;
+    for(var x of Object.keys(touhoudict.jp_en.characters).sort(function(a,b){ return b.length-a.length; })){
+      var e = opts[i];
+      if(e.textContent.search(x) > -1){
+        e.textContent = e.textContent.replace(x, touhoudict[dict].characters[x]);
+        c++;
+      }
     }
+  e.textContent = e.textContent.replace("と", " and ");
   }
   console.log("touhoudict: Translated " + c + " instances.");
   return (c > 0);
@@ -218,4 +221,4 @@ var en2jp_all = translate_all.bind(this, "en_jp");
 
 // actually run now
 
-jp2en_all("option");
+jp2en_all(".result td[style]");
