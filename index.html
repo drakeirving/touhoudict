@@ -44,7 +44,7 @@
           fetch("./main.js").then(function(res){ return res.text(); })
         ]).then(function(data){
           var s = "var touhoudict = "
-                + data[0].slice(0, -1)
+                + data[0].trim()
                 + ";\n\n"
                 + data[1];
           fill(s);
