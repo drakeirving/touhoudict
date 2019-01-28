@@ -60,7 +60,7 @@
     if(res !== undefined) return res;
 
     uri = uri.split("//")[1];
-    res = dict[uri][s];
+    if(uri in dict) res = dict[uri][s];
     if(res !== undefined) return res;
 
     return undefined;

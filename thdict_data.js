@@ -2,7 +2,7 @@ let dict = {
   "common": {
     "第15回 東方Project 人気投票": "15th Touhou Project Popularity Poll",
     "開催期間": "Voting Period",
-    "投票対象一覧": "Overview",
+    "投票対象一覧": "List",
     "投票の決まり": "Rules",
     "よくある質問": "FAQ",
     "投票支援リンク集": "Cheering",
