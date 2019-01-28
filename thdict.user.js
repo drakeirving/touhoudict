@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         touhoudict
-// @namespace    dork
-// @version      0.1
-// @description  bla
+// @namespace    https://drakeirving.github.io/touhoudict/
+// @version      2.0.0
+// @description  https://drakeirving.github.io/touhoudict/
 // @author       drakeirving
 // @match        http://toho-vote.info/*
 // @grant        none
@@ -46,7 +46,7 @@
         }
       });
     }
-    else if(node.localName === "input" && node.type === "text"){
+    else if(node.localName === "input" && node.placeholder !== undefined){
       // replace placeholder text
       let s = translate(node.baseURI, node.placeholder);
       if(s !== undefined){

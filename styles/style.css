@@ -32,8 +32,12 @@ body{
   text-align: justify;
 }
 h3{
+  margin-top: 1.5em;
   border-left: 6px solid #6cf;
   padding-left: 6px;
+}
+p{
+  color: #888;
 }
 a{
   text-decoration: none;
@@ -41,9 +45,6 @@ a{
 }
 a:visited{
   color: #29c;
-}
-.text-light{
-  color: #888;
 }
 
 pre{

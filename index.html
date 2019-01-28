@@ -15,24 +15,38 @@
 <body>
 	<div id="content">
 
-    <h1>touhoudict.js</h1>
+    <h1>touhoudict</h1>
 
-    <h3>translation script thingy</h3>
-    <p class="text-light">
-      Intended for use with the <a href=http://toho-vote.info>Touhou Project Popularity Contest</a>.
+    <!-- <h3>translation script thingy</h3> -->
+    <p>
+      For use with the <a href="http://toho-vote.info">Touhou Project Popularity Contest</a>. Written by <a href="https://twitter.com/drakeirving">@drakeirving</a>.
     </p>
-    <p class="text-light">
+    <div style="border-bottom: 1px solid #eee"></div>
+
+    <h3>Method 1: Userscript</h3>
+    <p>
+      Recommended. Install a userscript extension for your browser such as <a href="https://tampermonkey.net/">Tampermonkey</a>, then hit the button below to install the translator script. This will automatically run on the contest site and cache the dumb huge dictionary.
+    </p>
+
+    <a href="./thdict.user.js" style="margin-bottom: 1.5em; padding: 4px 8px; border: 1px solid #29c; text-align: center">
+      <strong>Install script</strong>
+    </a>
+
+    <p>
+      As the translation coverage is still in the works, you might also want to enter your userscript extension settings and set updating of external resources to "Always".
+    </p>
+
+    <h3>Method 2: Copypasting</h3>
+    <p>
       Click the copy button below to copy the script. Navigate to your desired voting page, open your browser's console (probably with F12), then
       paste into the console and run.
-    </p>
-    <p class="text-light">
-      Alternatively, right-click the bookmarklet button and bookmark it. Then while on the voting page, open the bookmarklet.
+    <p>
+      Note this will take considerably longer than the userscript and would have to be manually done on each page.
     </p>
 
     <div>
       <a id="button-copier">[copy!]</a>
-      <a id="button-bookmarklet">[bookmarklet!]</a>
-      <a href="https://twitter.com/drakeirving" style="float:right;">@drakeirving</a>
+
       <pre><code id="code-touhoudict" class="js"></code></pre>
     </div>
 
@@ -40,12 +54,11 @@
       (function(){
 
         Promise.all([
-          fetch("./touhoudict.json").then(function(res){ return res.text(); }),
-          fetch("./main.js").then(function(res){ return res.text(); })
+          fetch("./thdict_data.js").then(function(res){ return res.text(); }),
+          fetch("./thdict.user.js").then(function(res){ return res.text(); })
         ]).then(function(data){
-          var s = "var touhoudict = "
-                + data[0].trim()
-                + ";\n\n"
+          var s = data[0].trim()
+                + "\n\n"
                 + data[1];
           fill(s);
         });
@@ -68,10 +81,10 @@
             temp.remove();
           });
 
-          // set up bookmarklet
-          document.getElementById("button-bookmarklet").href = "javascript:(function(){"
-              + s.replace(/\/\/.*/g,"").replace(/\s\s/g,"").replace(/\n/g,"")
-              + "})();";
+          // // set up bookmarklet
+          // document.getElementById("button-bookmarklet").href = "javascript:(function(){"
+          //     + s.replace(/\/\/.*/g,"").replace(/\s\s/g,"").replace(/\n/g,"")
+          //     + "})();";
 
         }
 

@@ -77,8 +77,7 @@ let dict = {
     "【投票しよう】": "【Let's Vote!】",
     "　入力したアドレスに届いた投票IDを使用し、各部門へ投票（1/27 0:00 ～ 2/2 23:59）": "Voting in polls using the Voting ID associated with your email (1/27 0:00 ~ 2/2 23:59)",
     "【結果の発表】": "【Publish Results】",
-    "　速報は2/3予定。さらに後日、詳細な集計結果を発表": "The results summary is planned for 2/3. Following this, a breakdown of the results will be published later.",
-    "当初1月13日（日）より開催を予定しておりましたが、運営上の都合により、1月27日（日）〜2月2日に開催を延期いたしました。開始をお待ち頂いていた皆様には大変ご迷惑をお掛けいたしますが、何卒よろしくお願い致します。": ""
+    "　速報は2/3予定。さらに後日、詳細な集計結果を発表": "The results summary is planned for 2/3. Following this, a breakdown of the results will be published later."
   },
 
   "toho-vote.info/form/": {
@@ -95,23 +94,21 @@ let dict = {
   },
 
   "toho-vote.info/form/id_issue.php": {
-    "東方Project人気投票に投票するためには、投票用IDを発行する必要があります。": "",
-    "また不正投票を防止する観点から、投票用IDの発行にはメールアドレスを必須としています。": "",
-    "下記のフォームにメールアドレスをご記入の上、発行ボタンを押してください。": "",
-    "前回の投票IDの記入は任意ですので、未記入のままでも構いません（データチェック時の参考や結果発表時の統計として使用する予定です）。IDメールを再送信したい場合は記入不要です。": "",
-    "※前回投票IDはお問い合わせいただいても回答できません（メールアドレス情報は既に破棄しています）。": "",
+    "東方Project人気投票に投票するためには、投票用IDを発行する必要があります。": "In order to participate in the contest, you need to be issued a voting ID.",
+    "また不正投票を防止する観点から、投票用IDの発行にはメールアドレスを必須としています。": "Additionally, in order to prevent cheating, voting IDs must be tied to an email address.",
+    "下記のフォームにメールアドレスをご記入の上、発行ボタンを押してください。": "Please fill out the form below with your email address and hit the submit button.",
+    "前回の投票IDの記入は任意ですので、未記入のままでも構いません（データチェック時の参考や結果発表時の統計として使用する予定です）。IDメールを再送信したい場合は記入不要です。": "You may optionally add a voting ID issued from a previous contest, which will be used for data checking and statistics purposes. If you wish to resend the voting ID email you do not need to re-add it.",
+    "※前回投票IDはお問い合わせいただいても回答できません（メールアドレス情報は既に破棄しています）。": "※ Enquiries about previous contest voting IDs will be ignored, as the associated email information has already been discarded.",
     "メールアドレスを記入してください": "Please enter your email address",
     "前回の投票IDを記入してください（任意）": "Enter previous voter ID (Optional)",
     "上の画像の文字を入力してください": "Please enter the above characters",
     "送信": "Submit",
-    "※フリーメールアドレスは非推奨ですがやむを得ない場合は可とします。": "",
-    "※投票は1人につき各部門1回までです。多重投票と判断した投票は全て無効となります。": "",
-    "※その他細かいルールについては": "",
-    "投票の決まり": "",
-    "および": " as well as ",
-    "よくある質問": "",
-    "をご参照ください。": "",
-    "※迷惑メール設定を使用されている方は、｢@thwiki.info｣ドメインのメールを受信できるように設定してください。投票IDを記載したメールが届かない場合があります。": "",
+    "※フリーメールアドレスは非推奨ですがやむを得ない場合は可とします。": "Services granting temporary emails are not recommended but if it cannot be avoided they are allowed.",
+    "※投票は1人につき各部門1回までです。多重投票と判断した投票は全て無効となります。": "Each person is only allowed one submission per poll. If multiple submissions are found, all of them will be voided.",
+    "※その他細かいルールについては": "For other minor rules please refer to the ",
+    "および": " as well as the ",
+    "をご参照ください。": ".",
+    "※迷惑メール設定を使用されている方は、｢@thwiki.info｣ドメインのメールを受信できるように設定してください。投票IDを記載したメールが届かない場合があります。": "※ If you have any spam filter for your email, please whitelist the \"@thwiki.info\" domain. Otherwise, the email with your voting ID may never be received.",
     "投票部門選択に戻る": "Return to Voting Category Menu"
   },
 
@@ -1278,6 +1275,4 @@ let dict = {
     "送信": "Submit",
     "投票部門選択に戻る": "Return to Voting Category Menu"
   }
-
-
 };
