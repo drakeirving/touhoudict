@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         touhoudict
 // @namespace    https://drakeirving.github.io/touhoudict/
-// @version      2.0.0
+// @version      2.0.1
 // @description  https://drakeirving.github.io/touhoudict/
 // @author       drakeirving
 // @match        http://toho-vote.info/*
@@ -16,12 +16,12 @@
     document.body,
     NodeFilter.SHOW_ELEMENT,
     (function(){
-      let stuff = new Set(["a","h2","h3","dt","dd","em","input","p","optgroup","option","button","li","span"]);
+      // let stuff = new Set(["a","h2","h3","dt","dd","em","input","p","optgroup","option","button","li","span"]);
       return {
         acceptNode: function(node) {
-          if ( stuff.has(node.localName) ) {
+          // if ( stuff.has(node.localName) ) {
             return NodeFilter.FILTER_ACCEPT;
-          }
+          // }
         }
       };
     })()
