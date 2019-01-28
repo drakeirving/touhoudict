@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>touhoudict</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+  <link href="./styles/atom-one-dark.css" rel="stylesheet">
+  <script src="./js/highlight.pack.js"></script>
+  <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+  <link href="./styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="content">
+
+    <h1>touhoudict.js</h1>
+
+    <h3>translation script thingy</h3>
+    <p class="text-light">
+      Intended for use with the <a href=http://toho-vote.info>Touhou Project Popularity Contest</a>.
+    </p>
+    <p class="text-light">
+      Click the copy button below to copy the script. Navigate to your desired voting page, open your browser's console (probably with F12), then
+      paste into the console and run.
+    </p>
+    <p class="text-light">
+      Alternatively, right-click the bookmarklet button and bookmark it. Then while on the voting page, open the bookmarklet.
+    </p>
+
+    <div>
+      <a id="button-copier">[copy!]</a>
+      <a id="button-bookmarklet">[bookmarklet!]</a>
+      <a href="https://twitter.com/drakeirving" style="float:right;">@drakeirving</a>
+      <pre><code id="code-touhoudict" class="js"></code></pre>
+    </div>
+
+    <script>
+      (function(){
+
+        Promise.all([
+          fetch("./touhoudict.json").then(function(res){ return res.text(); }),
+          fetch("./main.js").then(function(res){ return res.text(); })
+        ]).then(function(data){
+          var s = "var touhoudict = "
+                + data[0].trim()
+                + ";\n\n"
+                + data[1];
+          fill(s);
+        });
+
+        var fill = function(s){
+          // fill content
+          var code = document.getElementById("code-touhoudict");
+          code.textContent = s;
+
+          // style
+          hljs.highlightBlock(code);
+
+          // set up copier
+          document.getElementById("button-copier").addEventListener("click", function(e){
+            var temp = document.createElement("textarea");
+            code.appendChild(temp);
+            temp.textContent = s;
+            temp.select();
+            document.execCommand("copy");
+            temp.remove();
+          });
+
+          // set up bookmarklet
+          document.getElementById("button-bookmarklet").href = "javascript:(function(){"
+              + s.replace(/\/\/.*/g,"").replace(/\s\s/g,"").replace(/\n/g,"")
+              + "})();";
+
+        }
+
+      })();
+    </script>
+
+	</div>
+
+</body>
+</html>
