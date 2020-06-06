@@ -4,7 +4,7 @@
 // @version      2.0.2
 // @description  https://drakeirving.github.io/touhoudict/
 // @author       drakeirving
-// @match        http://toho-vote.info/*
+// @match        https://toho-vote.info/*
 // @grant        none
 // @require      thdict_data.js
 // ==/UserScript==
