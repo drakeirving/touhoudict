@@ -1255,7 +1255,7 @@ let dict = {
     "05.現在購読している雑誌連載作品": "05. Currently-subscribed publications",
     "東方茨歌仙　\n        ": "WaHH　",
     "東方三月精　\n        ": "VFiS　",
-    "東方香霖堂　": "CoLA　",
+    "東方香霖堂　\n        ": "CoLA　",
     "※ここでの東方香霖堂は外來韋編連載分を指します。": "(Here Curiosities in Lotus Asia refers to the Strange Creators of Outer World serialization.)",
     "東方智霊奇伝　\n        ": "Chireikiden　",
     "東方酔蝶華　\n        ": "Suichouka　",
