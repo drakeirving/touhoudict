@@ -1359,13 +1359,18 @@ let dict = {
     "Ａ．固有名詞の無いキャラクタやモブキャラクタに関しては、票の分散や知名度などから判断して種族毎に同一枠としています。": "A. Characters without proper names will be included in the options named after their race.",
     "Ｑ．蓬莱人形（CD-R版）のレーベル面に描かれている子は投票対象外でしょうか？": "Q. Can I vote for the girl on the Dolls in Pseudo Paradise label?",
     "Ａ．第13回より投票対象となっています。": "A. As of the 13th contest they can be voted for.",
+    "Ｑ．茨木童子の腕、奸佞邪知の鬼は投票対象ですか？": "Can I vote for Ibaraki Douji's Arm, or the Cunning and Treacherous Oni?",
+    "Ａ．第16回より投票対象となっています。詳しくは": "As of the 16th contest they can be voted for. For details please refer to ",
+    "茨木華扇について": "About Kasen Ibaraki",
+    "をご覧ください。": ".",
+
 
     "音楽部門関連": "Music Poll",
     "Ｑ．音楽CDのアレンジ曲と原曲の扱いはどうなりますか？": "Q. How will votes for arrangements of original songs appearing on the music CDs be handled?",
     "Ａ．投票画面では別項目になっていますが、集計時にアレンジ曲と原曲は同一票にまとめられますので好きな方を選択して投票してください。なお両方に投票することはできませんが、": "A. Arrangements will be displayed as separate items on the voting screen, but votes for the arrangements and their original songs will be counted together during vote totaling. Please vote for the arrangement you like the most. You cannot vote for both the original song and the arrangement, ",
     "発表時にどの作品の曲に何票投票されたかを併せて公表する予定です": "but the counts of which songs were voted for will be included in the results ",
     "（例：": "(e.g., see ",
-    "前回の投票の詳細集計結果": "the detailed results from a previous contest",
+    "第12回の投票の詳細集計結果": "the detailed results from the 12th contest",
     "）。": ").",
     "Ｑ．恋色マジックと恋色マスタースパークなどの扱いはどうなりますか？": "Q. How are you treating the cases like \"Love-coloured Magic\" and \"Love-coloured Master Spark\"?",
     "Ａ．": "A. Please refer to the ",
@@ -1382,7 +1387,7 @@ let dict = {
     "Ｑ．スペルカードの投票をする予定は無いのでしょうか？": "Q. Are there any plans to include a Spell Card poll?",
     "Ａ．今のところ実施予定はありません。": "A. For the time being it will not be implemented.",
     "Ｑ．pixiv等で絵を描いているものですが、宣伝を兼ねた絵を描いてもよろしいでしょうか。": "Q. Can I use pictures I've drawn on Pixiv, etc. as publicity images?",
-    "Ａ．宣伝は歓迎しております。また、投稿時にハッシュタグ「#toho_vote15」「第15回東方Project人気投票」を付けることを推奨しております。また、参加者が自由に登録できる": "A. Publicity is welcome. Using the hashtags \"#toho_vote15\" and \"第15回東方Project人気投票\" is recommended. Participants can also put links to these works in the ",
+    "Ａ．宣伝は歓迎しております。また、投稿時にハッシュタグ「#toho_vote16」「第16回東方Project人気投票」を付けることを推奨しております。また、参加者が自由に登録できる": "A. Publicity is welcome. Using the hashtags \"#toho_vote16\" and \"第16回東方Project人気投票\" is recommended. Participants can also put links to these works in the ",
     "支援作品リンク集": "Cheering",
     "を用意しておりますので、こちらもぜひご活用いただければと思います。": " page to show their support."
   },
