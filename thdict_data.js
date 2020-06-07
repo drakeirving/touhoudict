@@ -37,6 +37,7 @@ let dict = {
     "東方深秘録": "Urban Legend in Limbo",
     "東方憑依華": "Antinomy of Common Flowers",
     "東方鬼形獣": "Wily Beast and Weakest Creature",
+    "東方剛欲異聞": "Touhou Gouyoku Ibun",
     "幺樂団の歴史": "Akyu's Untouched Score",
     "蓬莱人形": "Dolls in Pseudo Paradise",
     "蓮台野夜行": "Ghostly Field Club",
@@ -58,7 +59,10 @@ let dict = {
     "東方茨歌仙": "Wild and Horned Hermit",
     "東方鈴奈庵": "Forbidden Scrollery",
     "東方文果真報": "Alternative Facts in Eastern Utopia",
-    "東方酔蝶華": "Lotus Eaters"
+    "The Grimoire of Usami 秘封倶楽部異界撮影記録": "The Grimoire of Usami",
+    "東方智霊奇伝 反則探偵さとり": "Cheating Detective Satori",
+    "東方酔蝶華": "Lotus Eaters",
+    "東方Project人妖名鑑 宵闇編": "Who's Who of Humans & Youkai in Gensokyo"
   },
 
   "toho-vote.info/": {
@@ -839,6 +843,25 @@ let dict = {
     "燕石博物誌が連れてきた闇": "The Darkness Brought In by Swallowstone Naturalis Historia",
     "永遠の春夢": "Eternal Spring Dream",
     "秘匿されたフォーシーズンズ": "The Concealed Four Seasons",
+
+
+    "物言わぬ獣の霊": "Silent Beast Spirits",
+    "地蔵だけが知る哀嘆": "The Lamentations Known Only by Jizo",
+    "ジェリーストーン": "Jelly Stone",
+    "ロストリバー": "Lost River",
+    "石の赤子と水中の牛": "The Stone Baby and the Submerged Bovine",
+    "不朽の曼珠沙華": "Everlasting Red Spider Lily",
+    "セラフィックチキン": "Seraphic Chicken",
+    "アンロケイテッドヘル": "Unlocated Hell",
+    "トータスドラゴン　〜幸運と不運": "Tortoise Dragon ~ Fortune and Misfortune",
+    "ビーストメトロポリス": "Beast Metropolis",
+    "セラミックスの杖刀人": "Joutoujin of Ceramics",
+    "エレクトリックヘリテージ": "Electric Heritage",
+    "偶像に世界を委ねて　〜Idoratrize World": "Entrust this World to Idols ~ Idolatrize World",
+    "輝かしき弱肉強食の掟": "The Shining Law of the Strong Eating the Weak",
+    "聖徳太子のペガサス　〜Dark Pegasus": "Prince Shoutoku's Pegasus ~ Dark Pegasus",
+    "畜生達の休息": "The Animals' Rest",
+    "地下からの帰還": "Returning Home from the Underground",
 
     "A Sacred Lot": "A Sacred Lot",
     "永遠の巫女": "Eternal Shrine Maiden",
