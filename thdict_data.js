@@ -124,6 +124,14 @@ let dict = {
     "投票部門選択に戻る": "Return to Voting Category Menu"
   },
 
+  "toho-vote.info/form/id_view.php": {
+    "投票IDの確認": "Vote Review",
+    "投票に使用したIDを入力してください": "Please enter your voter ID",
+    "ID発行に使用したメールアドレスを入力してください": "Enter email linked with your voter ID",
+    "送信": "Submit",
+    "こちらでは投票情報の確認と修正が行えます。修正は1人につき各部門3回までとなりますので、ご注意ください。": "Here you can review and edit your voting data. Please be aware that you can only edit up to three times for all categories."
+  },
+
   "toho-vote.info/form/vote_character.php": {
     "人妖部門投票": "Character Poll",
     "投票ID": "Voting ID",
@@ -1289,7 +1297,7 @@ let dict = {
     "紺珠伝～旧約酒場（2016年8月）": "LoLK ~ Old Adam (2016/08)",
     "旧約酒場～天空璋（2017年8月）": "Old Adam ~ HSiFS (2017/08)",
     "天空璋～鬼形獣（2019年8月）": "HSiFS ~ WBaWC (2019/08)",
-    "鬼形獣～現在": "WBaBC ~ Current",
+    "鬼形獣～現在": "WBaWC ~ Current",
     "08.東方Projectを知ったきっかけ": "08. How did you first discover the Touhou Project series?",
     "学校、部活、家族などオフラインでのつながりから教えてもらった": "School, Clubs, Family, or other offline connection",
     "オンラインゲーム、チャット（IRC）などネットでのつながりから教えてもらった": "Online game, Chat (IRC), or otherwise through online friends",
