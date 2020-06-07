@@ -16,7 +16,7 @@
     document.body,
     NodeFilter.SHOW_ELEMENT,
     (function(){
-      let stuff = new Set(["a","h2","h3","dt","dd","em","input","p","optgroup","option","button","li","span","time"]);
+      let stuff = new Set(["a","h2","h3","dt","dd","em","input","p","optgroup","option","button","li","span","time", "i"]);
       return {
         acceptNode: function(node) {
           return (stuff.has(node.localName)) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
