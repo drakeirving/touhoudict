@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         touhoudict
 // @namespace    https://drakeirving.github.io/touhoudict/
-// @version      2.1.1
+// @version      2.2.0
 // @description  https://drakeirving.github.io/touhoudict/
 // @author       drakeirving
 // @match        https://toho-vote.info/*
