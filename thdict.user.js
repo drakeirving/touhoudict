@@ -12,11 +12,20 @@
 (function() {
   'use strict';
 
+  // import shared terms to each page
+  Object.keys(dict).forEach(k => {
+    if("_include" in dict[k]){
+      dict[k]["_include"].forEach(x => {
+        Object.assign(dict[k], dict[x]);
+      });
+    }
+  });
+
   let treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     (function(){
-      let stuff = new Set(["a","h2","h3","dt","dd","em","input","p","optgroup","option","button","li","span","time", "i"]);
+      let stuff = new Set(["a","h2","h3","dt","dd","em","input","p","optgroup","option","button","li","span","time", "i", "th", "td"]);
       return {
         acceptNode: function(node) {
           return (stuff.has(node.localName)) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
